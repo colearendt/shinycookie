@@ -17,7 +17,7 @@ shinyCookie = (function(){
     }
     namespace = ns;
   };
-/*
+
   var shinyCookieBinding = new Shiny.InputBinding();
 
   $.extend(shinyCookieBinding, {
@@ -42,15 +42,15 @@ shinyCookie = (function(){
     }
   });
 
-  Shiny.inputBindings.register(shinyCookieBinding);
-*/
+//  Shiny.inputBindings.register(shinyCookieBinding);
+
   Shiny.addCustomMessageHandler('shinyCookie', function(data) {
     $.each(data, function(key, val){
       if (typeof(val) !== 'string'){
         // If it's not a raw string, JSON.stringify
         val = JSON.stringify(val);
       }
-      Cookies.set(key, val, {expires: 7, path: namespace});
+      Cookies.set(key, val, {expires: 7, path: ''});
     });
   });
 
