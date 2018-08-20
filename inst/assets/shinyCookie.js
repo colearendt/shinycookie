@@ -3,17 +3,21 @@ shinyCookie = (function(){
 
   var namespace;
 
-  exports.getValue = function(key){
-    Cookies.get(key);
+  exports.getValue = Cookies.get;
+
+  exports.printNamespace = function(){
+    console.log(namespace);
+    console.log('blah');
   };
 
   exports.init = function(ns){
-    if (namespace !== null){
+    console.log(namespace);
+    if (namespace != null){
       throw new Error("shinyCookie cannot be initialized twice!");
     }
     namespace = ns;
   };
-
+/*
   var shinyCookieBinding = new Shiny.InputBinding();
 
   $.extend(shinyCookieBinding, {
@@ -39,7 +43,7 @@ shinyCookie = (function(){
   });
 
   Shiny.inputBindings.register(shinyCookieBinding);
-
+*/
   Shiny.addCustomMessageHandler('shinyCookie', function(data) {
     $.each(data, function(key, val){
       if (typeof(val) !== 'string'){
