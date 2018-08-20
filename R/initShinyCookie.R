@@ -9,7 +9,7 @@ initShinyCookie <- function(id, namespace) {
   tagList(
     singleton(tags$head(
       initResourcePaths(),
-      tags$script(src = 'shinyCookie/js.cookie.js'),
+      #tags$script(src = 'shinyCookie/js.cookie.js'),
       tags$script(src = 'shinyCookie/shinyCookie.js')
     )),
     HTML(paste0("<script type=\"text/javascript\">shinyCookie.init('",namespace,"')</script>")),
