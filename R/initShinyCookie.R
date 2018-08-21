@@ -16,6 +16,6 @@ initShinyCookie <- function(id, namespace) {
       script = c("js.cookie.js","shinyCookie.js")
     ),
     HTML(paste0("<script type=\"text/javascript\">shinyCookie.init('",namespace,"')</script>")),
-    div(class="shiny-cookie", id=id)
+    span(class="shiny-cookie", id=id)
   )
 }
