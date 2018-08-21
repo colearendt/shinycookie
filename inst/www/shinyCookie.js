@@ -3,7 +3,9 @@ shinyCookie = (function(){
 
   var namespace;
   var current_cookie;
-  var timer;
+  exports.timer = null;
+
+  var timeout = 500;
 
   exports.getValue = Cookies.get;
 
@@ -12,12 +14,13 @@ shinyCookie = (function(){
     console.log('blah');
   };
 
-  exports.init = function(ns){
+  exports.init = function(ns, tm){
     console.log(namespace);
     if (namespace != null){
       throw new Error("shinyCookie cannot be initialized twice!");
     }
     namespace = ns;
+    timeout = tm;
   };
 
   var shinyCookieBinding = new Shiny.InputBinding();
@@ -46,7 +49,7 @@ shinyCookie = (function(){
     },
     subscribe: function(el, callback) {
       console.log('subscribing');
-      timer = setInterval(function() {
+      exports.timer = setInterval(function() {
         console.log("timer fires");
         console.log(JSON.stringify(current_cookie));
         console.log(JSON.stringify(Cookies.get()));
@@ -54,13 +57,13 @@ shinyCookie = (function(){
           console.log('different!');
           callback();
         }
-      }, 1000);
+      }, timeout);
     //  $(el).on("change.shinyCookieBinding", function(e) {
     //    callback();
     //  });
     }, unsubscribe: function(el) {
       console.log('unsubscribing');
-      $(el).off(".shinyCookieBinding");
+      clearInterval(exports.timer);
     }
   });
 
