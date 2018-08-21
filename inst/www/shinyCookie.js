@@ -30,10 +30,10 @@ shinyCookie = (function(){
     initialize: function(el) {
       console.log('firing!');
     },
-    getType: function(){
-      console.log('get type');
-      return "shinyCookie";
-    },
+  //  getType: function(){
+  //    console.log('get type');
+  //    return "shinyCookie";
+  //  },
     getValue: function(el) {
       console.log('get value');
       return Cookies.get();
@@ -43,16 +43,16 @@ shinyCookie = (function(){
     },
     subscribe: function(el, callback) {
       console.log('subscribing');
-  //    $(el).on("change.shinyCookieBinding", function(e) {
-  //      callback();
-  //    });
+      $(el).on("change.shinyCookieBinding", function(e) {
+        callback();
+      });
     }, unsubscribe: function(el) {
       console.log('unsubscribing');
       $(el).off(".shinyCookieBinding");
     }
   });
 
-  Shiny.inputBindings.register(shinyCookieBinding);
+  Shiny.inputBindings.register(shinyCookieBinding, "shinyCookieBinding");
 
   Shiny.addCustomMessageHandler('shinyCookie', function(data) {
     $.each(data, function(key, val){
