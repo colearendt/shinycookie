@@ -12,4 +12,8 @@ shinyServer(function(input, output, session) {
 
   output$ui_based_cookie <- renderText({paste0("UI: ",input$cookies)})
   output$shiny_cookie <- renderText(session$request$HTTP_COOKIE)
+  output$my_cookie <- renderText({
+    paste0("My: ",
+           input$myid)
+  })
 })
