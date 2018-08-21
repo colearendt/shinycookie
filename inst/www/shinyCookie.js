@@ -2,6 +2,8 @@ shinyCookie = (function(){
   var exports = {};
 
   var namespace;
+  var current_cookie;
+  var timer;
 
   exports.getValue = Cookies.get;
 
@@ -36,16 +38,26 @@ shinyCookie = (function(){
   //  },
     getValue: function(el) {
       console.log('get value');
-      return Cookies.get();
+      current_cookie = Cookies.get();
+      return current_cookie;
     },
     setValue: function(el, value) {
       //TODO
     },
     subscribe: function(el, callback) {
       console.log('subscribing');
-      $(el).on("change.shinyCookieBinding", function(e) {
-        callback();
-      });
+      timer = setInterval(function() {
+        console.log("timer fires");
+        console.log(JSON.stringify(current_cookie));
+        console.log(JSON.stringify(Cookies.get()));
+        if (JSON.stringify(current_cookie) !== JSON.stringify(Cookies.get())) {
+          console.log('different!');
+          callback();
+        }
+      }, 1000);
+    //  $(el).on("change.shinyCookieBinding", function(e) {
+    //    callback();
+    //  });
     }, unsubscribe: function(el) {
       console.log('unsubscribing');
       $(el).off(".shinyCookieBinding");
