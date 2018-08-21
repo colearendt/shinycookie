@@ -4,7 +4,7 @@ library(shinyCookie)
 #' Define UI for application that demonstrates a simple shinyCookie example
 #' @author Cole Arendt \email{cole@@rstudio.com}
 shinyUI(function(req) {fluidPage(
-HTML("<script>Shiny.setInputValue('cookies', req$HTTP_COOKIE")
+    HTML(paste0("<script>Shiny.setInputValue('cookies', ",req$HTTP_COOKIE, "</script>")),
     titlePanel("Shiny Cookie"),
 
     sidebarLayout(
@@ -15,6 +15,9 @@ HTML("<script>Shiny.setInputValue('cookies', req$HTTP_COOKIE")
         ),
 
         mainPanel(
+            shiny::verbatimTextOutput("ui_based_cookie")
+            , shiny::verbatimTextOutput("my_cookie")
+            , shiny::verbatimTextOutput("shiny_cookie")
         )
     )
-))
+)})
