@@ -33,7 +33,7 @@ shinyCookie = (function(){
       return found;
     },
     initialize: function(el) {
-      console.log('firing!');
+      console.log('initialize!');
     },
   //  getType: function(){
   //    console.log('get type');
@@ -49,18 +49,14 @@ shinyCookie = (function(){
     },
     subscribe: function(el, callback) {
       console.log('subscribing');
+
       exports.timer = setInterval(function() {
         console.log("timer fires");
-        console.log(JSON.stringify(current_cookie));
-        console.log(JSON.stringify(Cookies.get()));
         if (JSON.stringify(current_cookie) !== JSON.stringify(Cookies.get())) {
           console.log('different!');
           callback();
         }
       }, timeout);
-    //  $(el).on("change.shinyCookieBinding", function(e) {
-    //    callback();
-    //  });
     }, unsubscribe: function(el) {
       console.log('unsubscribing');
       clearInterval(exports.timer);
