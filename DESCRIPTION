@@ -3,8 +3,11 @@ Version: 0.0.0.9000
 Title: Cookies in Shiny
 Description: What the package does (one paragraph).
 Authors@R: person("Cole", "Arendt", , "cole@rstudio.com", c("aut", "cre"))
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
 RoxygenNote: 6.0.1
+Imports: 
+    htmltools,
+    shiny
