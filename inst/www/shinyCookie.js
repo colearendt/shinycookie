@@ -1,7 +1,6 @@
 shinyCookie = (function(){
   var exports = {};
 
-  var namespace;
   var current_cookie;
   exports.timer = null;
 
@@ -9,17 +8,8 @@ shinyCookie = (function(){
 
   exports.getValue = Cookies.get;
 
-  exports.printNamespace = function(){
-    console.log(namespace);
-    console.log('blah');
-  };
 
-  exports.init = function(ns, tm){
-    console.log(namespace);
-    if (namespace != null){
-      throw new Error("shinyCookie cannot be initialized twice!");
-    }
-    namespace = ns;
+  exports.init = function(tm){
     timeout = tm;
   };
 
