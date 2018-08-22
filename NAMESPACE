@@ -2,3 +2,8 @@
 
 export(initShinyCookie)
 export(updateCookie)
+import(shiny)
+importFrom(htmltools,HTML)
+importFrom(htmltools,span)
+importFrom(htmltools,tagList)
+importFrom(utils,packageVersion)
