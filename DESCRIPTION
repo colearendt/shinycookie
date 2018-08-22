@@ -1,7 +1,7 @@
 Package: shinyCookie
 Version: 0.0.0.9000
 Title: Cookies in Shiny
-Description: What the package does (one paragraph).
+Description: A package that allows reading and writing cookies in Shiny apps without writing custom JavaScript
 Authors@R: c(
     person("Cole", "Arendt", , "cole@rstudio.com", c("aut", "cre"))
     ,person("RStudio", role = c("cph", "fnd"))
