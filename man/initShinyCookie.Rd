@@ -4,8 +4,16 @@
 \alias{initShinyCookie}
 \title{Initialize shinyCookie in an applicatoin's UI}
 \usage{
-initShinyCookie(id, namespace, timeout = 500)
+initShinyCookie(id, timeout = 500)
+}
+\arguments{
+\item{id}{The identifier that will be used to reference cookies from the server as input$id}
+
+\item{timeout}{The length of time (in milliseconds) to poll for changes to cookies}
 }
 \description{
-Initialize shinyCookie in an applicatoin's UI
+This initializes the shinyCookie object in the
+UI of the Shiny application. It should be placed
+within the UI of the Shiny application before any
+other `shinyCookie` functions are called.
 }

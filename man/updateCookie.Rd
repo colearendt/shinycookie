@@ -6,6 +6,14 @@
 \usage{
 updateCookie(session, name, value)
 }
+\arguments{
+\item{session}{The Shiny session variable}
+
+\item{name}{The name of the cookie to update}
+
+\item{value}{The value to assign to the cookie}
+}
 \description{
-Update Cookie
+Sets / updates a cookie's value in the browser.
+Serialization is handled by default (in `jsonlite`?).
 }

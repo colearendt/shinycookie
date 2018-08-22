@@ -6,9 +6,14 @@
 \alias{shinyCookie-package}
 \title{shinyCookie: Cookies in Shiny}
 \description{
-What the package does (one paragraph).
+A package that allows reading and writing cookies in Shiny apps without writing custom JavaScript
 }
 \author{
 \strong{Maintainer}: Cole Arendt \email{cole@rstudio.com}
+
+Other contributors:
+\itemize{
+  \item RStudio [copyright holder, funder]
+}
 
 }
