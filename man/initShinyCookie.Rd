@@ -4,7 +4,7 @@
 \alias{initShinyCookie}
 \title{Initialize shinyCookie in an applicatoin's UI}
 \usage{
-initShinyCookie(id, namespace)
+initShinyCookie(id, namespace, timeout = 500)
 }
 \description{
 Initialize shinyCookie in an applicatoin's UI
