@@ -35,10 +35,6 @@ shinyCookie = (function(){
     initialize: function(el) {
       console.log('initialize!');
     },
-  //  getType: function(){
-  //    console.log('get type');
-  //    return "shinyCookie";
-  //  },
     getValue: function(el) {
       console.log('get value');
       current_cookie = Cookies.get();
