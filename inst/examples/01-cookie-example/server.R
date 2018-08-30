@@ -15,7 +15,7 @@ shinyServer(function(input, output, session) {
   # render value of cookies
   output$shiny_cookie <- renderText({
     paste0("shinyCookie: ",
-           paste(capture.output(str(input$myid)), collapse="\n")
+           paste(capture.output(str(input$cookies)), collapse="\n")
     )
   })
 })
