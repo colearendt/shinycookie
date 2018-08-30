@@ -15,7 +15,7 @@ shinyUI(function(req) {fluidPage(
 
         mainPanel(
             shiny::verbatimTextOutput("ui_based_cookie")
-            , shiny::verbatimTextOutput("my_cookie")
+            , shiny::verbatimTextOutput("shinyCookie_cookie")
             , shiny::verbatimTextOutput("shiny_cookie")
             ,HTML(paste0("<script>Shiny.setInputValue('cookies', '",req$HTTP_COOKIE, "')</script>"))
         )
