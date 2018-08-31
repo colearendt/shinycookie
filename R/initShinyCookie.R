@@ -11,7 +11,7 @@
 #' @return NULL
 #'
 #' @export
-initShinyCookie <- function(id, namespace, timeout = 500) {
+initShinyCookie <- function(id, timeout = 500) {
   if (missing(id)){
     stop("Must provide an `id` when initializing the shinyCookie package")
   }
@@ -27,9 +27,7 @@ initShinyCookie <- function(id, namespace, timeout = 500) {
     ),
     HTML(
       paste0(
-        "<script type=\"text/javascript\">shinyCookie.init('",
-        namespace,
-        "', ",
+        "<script type=\"text/javascript\">shinycookie.init(",
         timeout,
         ")</script>")
       ),

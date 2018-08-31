@@ -9,9 +9,8 @@ shinyCookie = (function(){
   exports.getValue = Cookies.get;
 
 
-  exports.init = function(ns, tm){
+  exports.init = function(tm){
     timeout = tm;
-    namespace = ns;
   };
 
   var shinyCookieBinding = new Shiny.InputBinding();
