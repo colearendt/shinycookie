@@ -1,4 +1,4 @@
-shinyCookie = (function(){
+shinycookie = (function(){
   var exports = {};
 
   var current_cookie;
@@ -13,9 +13,9 @@ shinyCookie = (function(){
     timeout = tm;
   };
 
-  var shinyCookieBinding = new Shiny.InputBinding();
+  var shinycookieBinding = new Shiny.InputBinding();
 
-  $.extend(shinyCookieBinding, {
+  $.extend(shinycookieBinding, {
     find: function(scope) {
       console.log('firing find');
       var found = $.find(".shiny-cookie");
@@ -49,9 +49,9 @@ shinyCookie = (function(){
     }
   });
 
-  Shiny.inputBindings.register(shinyCookieBinding, "shinyCookieBinding");
+  Shiny.inputBindings.register(shinycookieBinding, "shinycookieBinding");
 
-  Shiny.addCustomMessageHandler('shinyCookie', function(data) {
+  Shiny.addCustomMessageHandler('shinycookie', function(data) {
     $.each(data, function(key, val){
       if (typeof(val) !== 'string'){
         // If it's not a raw string, JSON.stringify
