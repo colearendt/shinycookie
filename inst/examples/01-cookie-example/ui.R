@@ -10,7 +10,7 @@ shinyUI(fluidPage(
         sidebarPanel(
 
           # initialize cookie js in UI
-          initShinyCookie("cookies", "myns"),
+          initShinyCookie("cookies"),
 
           tags$p("More information about shinyCookie"),
           textInput("value", "Enter a value to be stored"),
