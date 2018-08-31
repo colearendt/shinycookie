@@ -1,5 +1,5 @@
 library(shiny)
-library(shinyCookie)
+library(shinycookie)
 
 #' Define UI for application that demonstrates a simple shinyCookie example
 #' @author Cole Arendt \email{cole@@rstudio.com}
