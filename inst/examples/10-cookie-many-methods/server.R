@@ -1,5 +1,5 @@
 library(shiny)
-library(shinyCookie)
+library(shinycookie)
 
 #' Define server logic required to generate a simple shinyCookie example
 #' @author Cole Arendt \email{cole@@rstudio.com}

@@ -1,5 +1,5 @@
 library(shiny)
-library(shinyCookie)
+library(shinycookie)
 
 #' Define UI for application that demonstrates a simple shinyCookie example
 #' @author Cole Arendt \email{cole@@rstudio.com}
@@ -8,7 +8,7 @@ shinyUI(function(req) {fluidPage(
 
     sidebarLayout(
         sidebarPanel(
-          initShinyCookie("myid"),
+          initShinyCookie("myid", "blah"),
           tags$p("More information about shinyCookie"),
           actionButton("fire", "Fire!")
         ),
