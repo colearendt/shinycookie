@@ -13,7 +13,7 @@
 #' @export
 initShinyCookie <- function(id, timeout = 500) {
   if (missing(id)){
-    stop("Must provide an ID when initializing the shinyCookie package")
+    stop("Must provide an `id` when initializing the shinyCookie package")
   }
 
 
