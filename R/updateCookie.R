@@ -4,20 +4,17 @@
 #' Serialization is handled by default (in `jsonlite`?).
 #'
 #' @param session The Shiny session variable
-#' @param name The name of the cookie to update
-#' @param value The value to assign to the cookie
+#' @param ... name=value pairs to be used in setting cookie values
 #'
 #' @return NULL
 #'
 #' @export
-updateCookie <- function(session, name, value) {
-  if (missing(session) || missing(name) || missing(value)) {
+updateCookie <- function(session, ...) {
+  if (missing(session)) {
     stop("Must provide a session, a name, and a value")
   }
 
-  li <- list()
-
-  li[[name]] <- value
+  li <- rlang::list2(...)
 
   session$sendCustomMessage("shinyCookie", li)
 
