@@ -7,7 +7,7 @@ shinyServer(function(input, output, session) {
   print(parseQueryString(session$request$HTTP_COOKIE))
 
   observeEvent(input$fire, {
-    updateCookie(session, "mykey", Sys.time())
+    updateCookie(session, "mykey"=Sys.time())
   })
 
   output$ui_based_cookie <- renderText({paste0("UI: ",input$cookies)})
