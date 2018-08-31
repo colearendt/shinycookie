@@ -33,6 +33,4 @@ initShinyCookie <- function(id, timeout = 500) {
       ),
     span(class="shiny-cookie", id=id)
   )
-
-  #invisible()
 }
