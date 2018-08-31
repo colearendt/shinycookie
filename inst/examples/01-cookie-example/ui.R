@@ -3,7 +3,7 @@ library(shinyCookie)
 
 #' Define UI for application that demonstrates a simple shinyCookie example
 #' @author Cole Arendt \email{cole@@rstudio.com}
-shinyUI(function(req) {fluidPage(
+shinyUI(fluidPage(
     titlePanel("Shiny Cookie"),
 
     sidebarLayout(
@@ -21,4 +21,4 @@ shinyUI(function(req) {fluidPage(
             shiny::verbatimTextOutput("shiny_cookie")
         )
     )
-)})
+))
