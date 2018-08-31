@@ -4,14 +4,12 @@
 \alias{updateCookie}
 \title{Update Cookie}
 \usage{
-updateCookie(session, name, value)
+updateCookie(session, ...)
 }
 \arguments{
 \item{session}{The Shiny session variable}
 
-\item{name}{The name of the cookie to update}
-
-\item{value}{The value to assign to the cookie}
+\item{...}{name=value pairs to be used in setting cookie values}
 }
 \description{
 Sets / updates a cookie's value in the browser.
