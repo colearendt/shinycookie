@@ -19,7 +19,7 @@ updateCookie <- function(session, name, value) {
 
   li[[name]] <- value
 
-  session$sendCustomMessage("shinyCookie", li)
+  session$sendCustomMessage("shinycookie", li)
 
   invisible()
 }
