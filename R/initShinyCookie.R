@@ -27,7 +27,7 @@ initShinyCookie <- function(id, timeout = 500) {
     ),
     HTML(
       paste0(
-        "<script type=\"text/javascript\">shinyCookie.init(",
+        "<script type=\"text/javascript\">shinycookie.init(",
         timeout,
         ")</script>")
       ),
