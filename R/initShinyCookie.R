@@ -19,7 +19,7 @@ initShinyCookie <- function(id, namespace, timeout = 500) {
 
   tagList(
     htmltools::htmlDependency(
-      name = "shinycookie",
+      name = "shinyCookie",
       version = packageVersion("shinycookie"),
       src = "www",
       package = "shinycookie",
@@ -27,7 +27,7 @@ initShinyCookie <- function(id, namespace, timeout = 500) {
     ),
     HTML(
       paste0(
-        "<script type=\"text/javascript\">shinycookie.init('",
+        "<script type=\"text/javascript\">shinyCookie.init('",
         namespace,
         "', ",
         timeout,
