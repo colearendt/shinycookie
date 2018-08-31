@@ -8,7 +8,7 @@ shinyUI(function(req) {fluidPage(
 
     sidebarLayout(
         sidebarPanel(
-          initShinyCookie("myid", "myapp"),
+          initShinyCookie("myid"),
           tags$p("More information about shinyCookie"),
           actionButton("fire", "Fire!")
         ),
