@@ -7,8 +7,9 @@ shinyServer(function(input, output, session) {
 
   # set value of cookies
   observeEvent(input$fire, {
-    updateCookie(session, "time", Sys.time())
-    updateCookie(session, "another_val", input$value)
+    updateCookie(session, "time"=Sys.time())
+    updateCookie(session, "another_val"=input$value)
+    updateCookie(session, !!!list(one="blah", two = "hi"))
   })
 
   # render value of cookies
