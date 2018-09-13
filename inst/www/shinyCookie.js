@@ -6,7 +6,7 @@ shinyCookie = (function(){
 
   var timeout = 500;
 
-  exports.getValue = Cookies.get;
+  exports.getValue = Cookies.getJSON;
 
 
   exports.init = function(tm){
@@ -27,7 +27,7 @@ shinyCookie = (function(){
     },
     getValue: function(el) {
       console.log('get value');
-      current_cookie = Cookies.get();
+      current_cookie = Cookies.getJSON();
       return current_cookie;
     },
     setValue: function(el, value) {
@@ -38,7 +38,7 @@ shinyCookie = (function(){
 
       exports.timer = setInterval(function() {
         console.log("timer fires");
-        if (JSON.stringify(current_cookie) !== JSON.stringify(Cookies.get())) {
+        if (JSON.stringify(current_cookie) !== JSON.stringify(Cookies.getJSON())) {
           console.log('different!');
           callback();
         }
