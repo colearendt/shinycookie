@@ -17,3 +17,5 @@ Imports:
     htmltools,
     shiny,
     rlang
+Suggests: 
+    testthat
