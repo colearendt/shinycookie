@@ -6,7 +6,7 @@ shinyCookie = (function(){
 
   var timeout = 500;
 
-  exports.getValue = Cookies.get;
+  exports.getValue = Cookies.getJSON;
 
 
   exports.init = function(tm){
@@ -17,9 +17,7 @@ shinyCookie = (function(){
 
   $.extend(shinyCookieBinding, {
     find: function(scope) {
-      console.log('firing find');
       var found = $.find(".shiny-cookie");
-      console.log('found ' + JSON.stringify(found));
       return found;
     },
     initialize: function(el) {
@@ -27,24 +25,19 @@ shinyCookie = (function(){
     },
     getValue: function(el) {
       console.log('get value');
-      current_cookie = Cookies.get();
+      current_cookie = Cookies.getJSON();
       return current_cookie;
     },
     setValue: function(el, value) {
       //TODO
     },
     subscribe: function(el, callback) {
-      console.log('subscribing');
-
       exports.timer = setInterval(function() {
-        console.log("timer fires");
-        if (JSON.stringify(current_cookie) !== JSON.stringify(Cookies.get())) {
-          console.log('different!');
+        if (JSON.stringify(current_cookie) !== JSON.stringify(Cookies.getJSON())) {
           callback();
         }
       }, timeout);
     }, unsubscribe: function(el) {
-      console.log('unsubscribing');
       clearInterval(exports.timer);
     }
   });

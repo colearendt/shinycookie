@@ -6,7 +6,8 @@
 \alias{shinycookie-package}
 \title{shinycookie: Cookies in Shiny}
 \description{
-A package that allows reading and writing cookies in Shiny apps without writing custom JavaScript. Uses the js-cookie library
+A package that allows reading and writing cookies in Shiny apps 
+    without writing custom JavaScript. It is powered by the js-cookie library.
 }
 \author{
 \strong{Maintainer}: Cole Arendt \email{cole@rstudio.com}
