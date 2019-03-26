@@ -17,9 +17,7 @@ shinyCookie = (function(){
 
   $.extend(shinyCookieBinding, {
     find: function(scope) {
-      console.log('firing find');
       var found = $.find(".shiny-cookie");
-      console.log('found ' + JSON.stringify(found));
       return found;
     },
     initialize: function(el) {
@@ -34,17 +32,12 @@ shinyCookie = (function(){
       //TODO
     },
     subscribe: function(el, callback) {
-      console.log('subscribing');
-
       exports.timer = setInterval(function() {
-        console.log("timer fires");
         if (JSON.stringify(current_cookie) !== JSON.stringify(Cookies.getJSON())) {
-          console.log('different!');
           callback();
         }
       }, timeout);
     }, unsubscribe: function(el) {
-      console.log('unsubscribing');
       clearInterval(exports.timer);
     }
   });
