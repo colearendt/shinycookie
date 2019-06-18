@@ -19,4 +19,7 @@ Imports:
     shiny,
     rlang
 Suggests: 
-    testthat
+    testthat,
+    covr
+Depends: 
+    R (>= 3.1)
