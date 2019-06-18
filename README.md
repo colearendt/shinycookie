@@ -1,3 +1,8 @@
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/colearendt/shinyCookie.svg?branch=master)](https://travis-ci.org/colearendt/shinyCookie)
+[![Codecov test coverage](https://codecov.io/gh/colearendt/shinyCookie/branch/master/graph/badge.svg)](https://codecov.io/gh/colearendt/shinyCookie?branch=master)
+<!-- badges: end -->
+  
 # Shiny Cookie
 
 The `shinycookie` package uses the [`js-cookie`](https://github.com/js-cookie/js-cookie) library to write cookies in Shiny applications without writing JavaScript.
