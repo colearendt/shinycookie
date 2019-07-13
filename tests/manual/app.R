@@ -5,8 +5,7 @@ obj_list <- list(
   integer = 1L,
   numeric = 1,
   numeric_decimal = 1.234,
-  # TODO: a fromJSON that doesn't puke on text
-  #character = "some-text",
+  character = '"some-text"',
   vector_character = c("a", "b", "c"),
   vector_numeric = c(1,2,3),
   vector_numeric_decimal = c(1.2, 2.2, 3.2),
