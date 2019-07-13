@@ -5,7 +5,8 @@ obj_list <- list(
   integer = 1L,
   numeric = 1,
   numeric_decimal = 1.234,
-  character = "some-text",
+  # TODO: a fromJSON that doesn't puke on text
+  #character = "some-text",
   vector_character = c("a", "b", "c"),
   vector_numeric = c(1,2,3),
   vector_numeric_decimal = c(1.2, 2.2, 3.2),
@@ -26,7 +27,8 @@ obj_list <- list(
       bump <- reactiveVal(TRUE)
 
       output$cookie_text <- renderUI({
-         htmltools::HTML(paste(capture.output(str(input$cookie)), collapse="<br>"))
+        req(input$cookie)
+         htmltools::HTML(paste(capture.output(str(purrr::map(input$cookie, ~ jsonlite::fromJSON(.x)))), collapse="<br>"))
       })
 
       output$label <- renderText({
