@@ -2,3 +2,6 @@
 ^\.Rproj\.user$
 ^shinycookie\.Rproj$
 ^LICENSE\.md$
+^\.travis\.yml$
+^codecov\.yml$
+^\.covrignore$
