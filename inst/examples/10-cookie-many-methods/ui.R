@@ -10,7 +10,8 @@ shinyUI(function(req) {fluidPage(
         sidebarPanel(
           initShinyCookie("myid"),
           tags$p("More information about shinyCookie"),
-          actionButton("fire", "Fire!")
+          actionButton("fire", "Fire!"),
+          actionButton("remove", "Remove!")
         ),
 
         mainPanel(

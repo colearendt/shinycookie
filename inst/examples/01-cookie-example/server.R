@@ -12,6 +12,14 @@ shinyServer(function(input, output, session) {
     updateCookie(session, !!!list(one="blah", two = "hi"))
   })
 
+  # remove a cookie
+  observeEvent(input$remove, {
+    removeCookie(name = "time")
+    removeCookie("another_val")
+    removeCookie("one")
+    removeCookie("two")
+  })
+
   # render value of cookies
   output$shiny_cookie <- renderText({
     paste0("shinyCookie: ",

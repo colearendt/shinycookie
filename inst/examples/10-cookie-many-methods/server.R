@@ -17,4 +17,8 @@ shinyServer(function(input, output, session) {
            paste(capture.output(str(input$myid)), collapse=" ")
     )
   })
+
+  observeEvent(input$remove, {
+    removeCookie("mykey")
+  })
 })

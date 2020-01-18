@@ -14,7 +14,8 @@ shinyUI(fluidPage(
 
           tags$p("More information about shinyCookie"),
           textInput("value", "Enter a value to be stored"),
-          actionButton("fire", "Fire!")
+          actionButton("fire", "Fire!"),
+          actionButton("remove", "Remove!")
         ),
 
         mainPanel(
