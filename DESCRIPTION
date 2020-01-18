@@ -1,5 +1,5 @@
 Package: shinycookie
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Title: Cookies in Shiny
 Description: A package that allows reading and writing cookies in Shiny apps 
     without writing custom JavaScript. It is powered by the js-cookie library.
