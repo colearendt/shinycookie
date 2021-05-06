@@ -24,7 +24,7 @@ shinyCookie = (function(){
       console.log('initialize!');
     },
     getValue: function(el) {
-      console.log('get value');
+      //console.log('get value');
       current_cookie = Cookies.getJSON();
       return current_cookie;
     },
